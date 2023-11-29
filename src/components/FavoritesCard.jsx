@@ -1,8 +1,6 @@
-import React from 'react';
-import { View, StyleSheet } from 'react-native';
-import { Avatar, Button, Card, Text } from 'react-native-paper';
 
-const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
+import React from 'react';
+import { Card, Text } from 'react-native-paper';
 
 const FavoritesCard = () => (
     
@@ -10,7 +8,7 @@ const FavoritesCard = () => (
         width:350, 
         height: 300, 
         alignSelf: 'center', 
-        marginTop: 15, 
+        marginTop: 5, 
         shadowColor: '#333333',
         shadowOffset:{
             width:6,

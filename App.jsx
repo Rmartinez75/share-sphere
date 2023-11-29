@@ -1,21 +1,30 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
 import HomeScreen from './src/screens/HomeScreen'
+import CreateListScreen from './src/screens/CreateListScreen';
 
 const Stack = createStackNavigator()
 
 const App = () => {
   return(
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen 
-          name='Home'
-          component={HomeScreen}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar style='dark' />
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen 
+            name='Home'
+            component={HomeScreen}
+          />
+          <Stack.Screen 
+            name='Create List'
+            component={CreateListScreen}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </>
   )
 }
 
